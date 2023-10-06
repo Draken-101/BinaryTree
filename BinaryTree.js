@@ -15,6 +15,7 @@ class BinaryTree{
         if(this.root === null){
             this.root = newNode;
         } else {
+            
             let currentNode = this.root;
 
             while(true){
@@ -30,20 +31,20 @@ class BinaryTree{
                         currentNode.derecha = newNode;
                         return true;
                     }
-                    currentNode = currentNode.derecha;
+                    currentNode = currentNode.deraecha;
                 }
             }
         }
     }
-    verValor(){
-        return this.root;
-    }
-
+//  verValor(){
+//    return this.root       Esta funcion no aporta nada estaba demas en el codigo no ejecuta nada.
+  //}
     buscar(valor){
         let currentNode = this.root;
 
-        while(currentNode !== null){
-            if(valor === currentNode.valor){
+        while(currentNode !== null){  
+            if(valor === currentNode.valor){ 
+            //Modificamos el true hacemos que muestre si el  valor es igual y cambia la siguinete posicion y si es igual vuelve hacer lo mismo hasta que no sean iguales.
                 console.log(currentNode.valor);
                 currentNode = currentNode.derecha;
                 if(currentNode === null){
