@@ -34,7 +34,7 @@ class BinaryTree{
                 }
             }
         }
-    }
+    }aa
     verValor(){
         return this.root;
     }
