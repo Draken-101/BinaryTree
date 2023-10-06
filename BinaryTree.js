@@ -35,7 +35,6 @@ class BinaryTree{
             }
         }
     }
-
     verValor(){
         return this.root;
     }
