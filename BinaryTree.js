@@ -34,7 +34,7 @@ class BinaryTree{
                 }
             }
         }
-    }aa
+    }
     verValor(){
         return this.root;
     }
@@ -44,7 +44,11 @@ class BinaryTree{
 
         while(currentNode !== null){
             if(valor === currentNode.valor){
-                return true;
+                console.log(currentNode.valor);
+                currentNode = currentNode.derecha;
+                if(currentNode === null){
+                    return true;
+                }
             } else if(valor < currentNode.valor){
                 currentNode = currentNode.izquierda;
             } else {
@@ -56,8 +60,11 @@ class BinaryTree{
 }
 
 
-    const tree = new BinaryTree();
+const tree = new BinaryTree();
+const nums = [1,2,3,2,2,2,1,1,1,2,2]
 
-for(let i = 1; i < 6; i++){
-    tree.insertar(i);
+for(let i = 1; i < nums.length; i++){
+    tree.insertar(nums[i]);
 }
+
+tree.buscar(2);
